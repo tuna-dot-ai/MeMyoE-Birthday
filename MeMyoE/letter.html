@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewer Letters</title>
+
+    <link rel="stylesheet" href="letter.css">
+</head>
+
+<body>
+
+    <!-- BGM -->
+    <audio id="bgm" autoplay loop preload="auto">
+        <source src="audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 배경 오버레이 -->
+    <div class="overlay"></div>
+
+    <main class="container">
+
+        <h1>💌 Viewer Letters</h1>
+
+        <!-- 페이지 표시 -->
+        <div class="page-indicator">
+            <span id="pageText">1 / 2</span>
+        </div>
+
+        <!-- 편지 이미지 -->
+        <div class="letter-view">
+
+            <button class="nav-btn" onclick="prevLetter()">
+                ◀
+            </button>
+
+            <img
+                id="letterImage"
+                src="images/letters/letter1.png"
+                alt="Letter"
+            >
+
+            <button class="nav-btn" onclick="nextLetter()">
+                ▶
+            </button>
+
+        </div>
+
+        <button class="home-btn"
+                onclick="location.href='main.html'">
+
+            🏠 메인으로 돌아가기
+
+        </button>
+
+    </main>
+
+    <script src="letter.js"></script>
+
+</body>
+
+</html>
