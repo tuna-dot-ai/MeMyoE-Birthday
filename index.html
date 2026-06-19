@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeMyoE Birthday Project</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <audio id="bgm" autoplay loop>
+     <source src="audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 배경 오버레이 -->
+    <div class="background-glow"></div>
+
+    <div class="petals">
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+    </div>
+
+    <!-- 메인 화면 -->
+    <div class="container">
+
+        <h1 class="title">MeMyoE</h1>
+
+        <p class="subtitle">
+            Birthday Project 2026
+        </p>
+
+        <!-- 봉투 -->
+        <img
+            src="images/envelope.png"
+            alt="Envelope"
+            class="envelope"
+            onclick="openLetter()"
+        >
+
+        <p class="click-text">
+            ✨ Click the Envelope ✨
+        </p>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- 편지 화면 -->
+    <!-- ========================= -->
+
+    <div id="overlay">
+
+        <div id="letter-container">
+
+            <!-- 편지지 -->
+            <img
+                src="images/letter.png"
+                alt="Letter"
+                class="letter-image"
+            >
+
+            <!-- 편지 내용 -->
+            <div class="letter-content">
+
+                <h2>Dear MeMyoE 💜</h2>
+
+                <p>
+                    안녕하세요.<br><br>
+
+                    이 편지는 당신의 특별한 생일을 축하하기 위해<br>
+                    팬들이 작은 마음을 모아 준비한 선물입니다.<br><br>
+
+                    항상 멋진 모습과 따뜻한 웃음을 보여주셔서 감사합니다.<br>
+                    앞으로도 행복한 추억이 계속 이어지길 바랍니다.<br><br>
+
+                    🎂 Happy Birthday 🎂
+                </p>
+
+                <button class="enter-btn" onclick="enterSite()">
+                    🚪 추억 속으로
+                </button>
+
+                <button class="close-btn" onclick="closeLetter()">
+                    ✖ 닫기
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

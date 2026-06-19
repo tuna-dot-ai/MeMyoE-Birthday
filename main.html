@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MeMyoE Birthday Project</title>
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- BGM -->
+    <!-- ========================= -->
+
+    <audio id="bgm" autoplay loop preload="auto">
+        <source src="audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ========================= -->
+    <!-- Background -->
+    <!-- ========================= -->
+
+    <div class="background-glow"></div>
+
+    <div class="stars"></div>
+
+    <div class="fireflies">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- ========================= -->
+    <!-- Hero -->
+    <!-- ========================= -->
+
+    <section class="hero">
+
+        <h1 class="title">
+            MeMyoE
+        </h1>
+
+        <p class="subtitle">
+            Birthday Project 2026
+        </p>
+
+        <!-- Countdown -->
+
+        <div id="countdown">
+
+            <div class="count-box">
+                <span id="days">00</span>
+                <small>DAYS</small>
+            </div>
+
+            <div class="count-box">
+                <span id="hours">00</span>
+                <small>HOURS</small>
+            </div>
+
+            <div class="count-box">
+                <span id="minutes">00</span>
+                <small>MINUTES</small>
+            </div>
+
+            <div class="count-box">
+                <span id="seconds">00</span>
+                <small>SECONDS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Menu -->
+    <!-- ========================= -->
+
+    <section class="menu-grid">
+
+        <!-- YouTube -->
+
+        <div class="menu-card"
+             onclick="window.open('https://www.youtube.com/@VeryVENY','_blank')">
+
+            <img src="images/frame.png"
+                 class="card-frame"
+                 alt="frame">
+
+            <div class="card-content">
+
+                <div class="icon">▶️</div>
+
+                <h3>YouTube</h3>
+
+                <p>Official Channel</p>
+
+            </div>
+
+        </div>
+
+        <!-- FULLMOON -->
+
+        <div class="menu-card"
+             onclick="window.open('https://www.youtube.com/@VENY_FULLMOON','_blank')">
+
+            <img src="images/frame.png"
+                 class="card-frame"
+                 alt="frame">
+
+            <div class="card-content">
+
+                <div class="icon">🌕</div>
+
+                <h3>FULLMOON</h3>
+
+                <p>Archive Channel</p>
+
+            </div>
+
+        </div>
+
+        <!-- SOOP -->
+
+        <div class="menu-card"
+             onclick="window.open('https://www.sooplive.com/station/veryveny','_blank')">
+
+            <img src="images/frame.png"
+                 class="card-frame"
+                 alt="frame">
+
+            <div class="card-content">
+
+                <div class="icon">📺</div>
+
+                <h3>SOOP</h3>
+
+                <p>Live Broadcast</p>
+
+            </div>
+
+        </div>
+
+        <!-- TikTok -->
+
+        <div class="menu-card"
+             onclick="window.open('https://www.tiktok.com/@veryvenyy','_blank')">
+
+            <img src="images/frame.png"
+                 class="card-frame"
+                 alt="frame">
+
+            <div class="card-content">
+
+                <div class="icon">🎵</div>
+
+                <h3>TikTok</h3>
+
+                <p>Short Videos</p>
+
+            </div>
+
+        </div>
+
+        <!-- Today's Fortune -->
+
+        <div class="menu-card"
+             onclick="showFortune()">
+
+            <img src="images/frame.png"
+                 class="card-frame"
+                 alt="frame">
+
+            <div class="card-content">
+
+                <div class="icon">🔮</div>
+
+                <h3>Today's Fortune</h3>
+
+                <p>Check your luck!</p>
+
+            </div>
+
+        </div>
+
+        <!-- Mini Game -->
+
+        <div class="menu-card">
+
+            <img src="images/frame.png"
+                 class="card-frame"
+                 alt="frame">
+
+            <div class="card-content">
+
+                <div class="icon">🎮</div>
+
+                <h3>Mini Game</h3>
+
+                <p>Coming Soon...</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ========================================= -->
+    <!-- Viewer Letters -->
+    <!-- ========================================= -->
+
+    <section class="viewer-letters"
+         onclick="openLetters()">
+
+        <!-- 나무 프레임 -->
+        <img
+            src="images/viewer_letters_frame.png"
+            alt="Viewer Letters"
+            class="viewer-frame"
+        >
+
+        <!-- 프레임 안 내용 -->
+        <div class="viewer-content">
+
+            <h2>💌 Viewer Letters</h2>
+
+            <p>
+                팬들이 전하는<br>
+                따뜻한 마음을 읽어보세요.
+            </p>
+
+            <div class="viewer-enter">
+                🌸 Click to Enter 🌸
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- Fortune Modal -->
+    <!-- ========================================= -->
+
+    <div id="fortuneModal" class="fortune-modal">
+
+        <div class="fortune-box">
+
+            <h2>
+                🔮 Today's Fortune
+            </h2>
+
+            <p id="fortuneText">
+            </p>
+
+            <button onclick="closeFortune()">
+                닫기
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Footer -->
+    <!-- ========================================= -->
+
+    <footer class="footer">
+
+        <p>
+            Made with 💜 for MeMyoE Birthday Project 2026
+        </p>
+
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- Script -->
+    <!-- ========================================= -->
+
+    <script src="main.js"></script>
+    
+    <!-- ========================= -->
+    <!-- Photo Transition -->
+    <!-- ========================= -->
+
+    <div id="photoTransition">
+
+     <!-- 11시 방향 -->
+     <img src="images/photo1.png" class="transition-photo p1" alt="">
+     <img src="images/photo2.png" class="transition-photo p2" alt="">
+     <img src="images/photo3.png" class="transition-photo p3" alt="">
+
+     <!-- 5시 방향 -->
+     <img src="images/photo4.png" class="transition-photo p4" alt="">
+     <img src="images/photo5.png" class="transition-photo p5" alt="">
+     <img src="images/photo6.png" class="transition-photo p6" alt="">
+
+    </div>
+    
+</body>
+
+</html>
