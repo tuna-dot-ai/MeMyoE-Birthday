@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🎵 Music Room</title>
+
+    <link rel="stylesheet" href="music.css">
+
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- Background Glow -->
+    <!-- ========================================= -->
+
+    <div class="background-glow"></div>
+
+    <!-- ========================================= -->
+    <!-- Music Particles -->
+    <!-- ========================================= -->
+
+    <div class="music-particles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Floating Notes -->
+    <!-- ========================================= -->
+
+    <div class="music-notes">
+
+        <span>♪</span>
+        <span>♫</span>
+        <span>♬</span>
+        <span>♪</span>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Main Container -->
+    <!-- ========================================= -->
+
+    <div class="container">
+
+        <!-- Title -->
+
+        <h1 class="title">
+            🎵 Music Room
+        </h1>
+
+        <p class="subtitle">
+            MeMyoE Favorite Playlist
+        </p>
+
+        <!-- ========================================= -->
+        <!-- Record Player -->
+        <!-- ========================================= -->
+
+        <div class="carousel">
+
+            <!-- Previous -->
+
+            <button
+                class="nav-btn"
+                onclick="prevSong()"
+            >
+                ◀
+            </button>
+
+            <!-- LP Area -->
+
+            <div class="record-wrapper">
+
+                <!-- Glow -->
+
+                <div class="record-glow"></div>
+
+                <!-- Neon Ring -->
+
+                <div class="record-ring"></div>
+
+                <!-- Equalizer -->
+
+                <div class="equalizer">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <!-- Record -->
+
+                <img
+                    id="record"
+                    src="images/record1.png"
+                    class="record"
+                    alt="record"
+                >
+
+            </div>
+
+            <!-- Next -->
+
+            <button
+                class="nav-btn"
+                onclick="nextSong()"
+            >
+                ▶
+            </button>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- Song Info -->
+        <!-- ========================================= -->
+
+        <h2 id="songTitle">
+            나의 우주
+        </h2>
+
+        <p class="song-number">
+            01 / 06
+        </p>
+
+        <!-- ========================================= -->
+        <!-- Controls -->
+        <!-- ========================================= -->
+
+        <button
+            class="play-btn"
+            onclick="toggleSpin()"
+        >
+            ▶ PLAY
+        </button>
+
+        <br>
+
+        <button
+            class="home-btn"
+            onclick="location.href='main.html'"
+        >
+            🏠 메인으로
+        </button>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Audio (Future Use) -->
+    <!-- ========================================= -->
+
+    <audio id="player"></audio>
+
+    <!-- ========================================= -->
+    <!-- Dynamic Notes -->
+    <!-- ========================================= -->
+
+    <div id="noteContainer"></div>
+
+
+    <!-- ========================================= -->
+    <!-- Script -->
+    <!-- ========================================= -->
+
+    <script src="music.js"></script>
+
+</body>
+
+</html>
